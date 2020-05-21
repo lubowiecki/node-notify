@@ -1,0 +1,44 @@
+{
+  "name": "@lubowiecki/node-notify",
+  "version": "1.0.0",
+  "description": "Node notify",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "prepublishOnly": "tsc",
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lubowiecki/node-notify.git"
+  },
+  "keywords": [
+    "node notify"
+  ],
+  "author": "Dawid Lubowiecki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lubowiecki/node-notify/issues"
+  },
+  "homepage": "https://github.com/lubowiecki/node-notify#readme",
+  "dependencies": {
+    "chalk": "^4.0.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-sonarts": "^1.9.0",
+    "typescript": "^3.9.3"
+  }
+}
