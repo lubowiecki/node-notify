@@ -1,13 +1,15 @@
 {
   "name": "@lubowiecki/node-notify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Node notify",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "npx rimraf dist && tsc && npm run docs:build",
+    "docs:build": "npx typedoc --mode file --out dist/docs src && npx copyfiles assets/**/* dist/docs",
+    "docs:serve": "npx serve dist/docs"
   },
-  "prepublishOnly": "tsc",
+  "prepublishOnly": "npm run build",
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
