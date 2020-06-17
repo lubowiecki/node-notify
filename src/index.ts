@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-export interface NotifyProps {
+interface NotifyProps {
   message?: string;
   error?: Error;
 }
@@ -8,6 +8,9 @@ export interface NotifyProps {
 export class Notify {
   private constructor() {}
 
+  /**
+   * Display info message
+   */
   static info(props: NotifyProps): void {
     const message = props.message;
 
@@ -16,6 +19,9 @@ export class Notify {
     }
   }
 
+  /**
+   * Display success message
+   */
   static success(props: NotifyProps): void {
     const message = props.message;
 
@@ -24,6 +30,9 @@ export class Notify {
     }
   }
 
+  /**
+   * Display warning message
+   */
   static warning(props: NotifyProps): void {
     const message = props.message;
 
@@ -32,6 +41,9 @@ export class Notify {
     }
   }
 
+  /**
+   * Display error
+   */
   static error(props: NotifyProps): void {
     const message = props.message;
 
